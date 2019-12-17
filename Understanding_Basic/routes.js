@@ -19,13 +19,13 @@ const requestHandler = (req, res) => {
         const body = [];                                                        //array decalaration
 
         //chunk = is a buffer which store binary data
-        req.on('data', (chunk) => {                                             //data event listener
+        req.on('data', (chunk) => {                                             //listen data event
             console.log(chunk);                                     
             body.push(chunk);                                                   //add chunk into last element of array
         });
 
-        req.on('end', () => {                                                   //end event listener
-            const parsedBody = Buffer.concat(body).toString();                  //convert chunk into string
+        req.on('end', () => {                                                   //listen end event
+            const parsedBody = Buffer.concat(body).toString();                  //create a buffer and convert chunk into string
             const message = parsedBody.split('=')[1];
             fs.writeFile('message.txt', message, err =>{                        //GOOD CODE : for high performance    
                 res.statusCode = 302;                                           //code resource
