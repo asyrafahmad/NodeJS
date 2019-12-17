@@ -2,7 +2,7 @@ const express = require('express');
 
 const router = express.Router();
 
-router.use('/add-product', (req, res, next) => {
+router.get('/add-product', (req, res, next) => {
     res.send('<form action="/product" method="POST"><input type="text" name="title"><button type="submit">Add Product</button></form>');        //send = to display
 });                                          
 
@@ -11,4 +11,4 @@ router.post('/product', (req, res, next) => {
     res.redirect('/');
 });
 
-module.experts = router;
+module.exports = router;
