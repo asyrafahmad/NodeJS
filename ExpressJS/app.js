@@ -1,4 +1,3 @@
-const http = require('http');                       //import http
 
 const express = require('express');                 //import expressJS
 const app = express();                              //execute expressJS (initialize object)
