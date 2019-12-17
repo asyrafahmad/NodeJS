@@ -8,7 +8,7 @@ const shopRoutes = require('./routes/shop.js');
 
 app.use(express.urlencoded({extended: true}));                   //call body parser
 
-app.use(adminRoutes);
+app.use('/admin', adminRoutes);
 app.use(shopRoutes);  
 
 //to display 404 not found
