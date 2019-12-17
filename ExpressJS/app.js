@@ -10,8 +10,14 @@ app.use((req, res, next) => {                       //use = allow to add middlew
 
 app.use((req, res, next) => {                        
     console.log('In another middleware!');
+    res.send('<h1>Hello from expressJS</h1>');
 });                                          
 
-const server = http.createServer(app);
+//*LISTEN TO SERVER
 
-server.listen(3000);
+// const server = http.createServer(app);
+// server.listen(3000);
+
+//OR
+
+app.listen(3000);
