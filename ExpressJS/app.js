@@ -1,3 +1,5 @@
+const path = require('path');
+
 const express = require('express');                 //import expressJS
 const bodyParser = require('body-parser');          //import body parser
 
@@ -13,7 +15,7 @@ app.use(shopRoutes);
 
 //to display 404 not found
 app.use((req, res, next) => {
-    res.status(404).send('<h1>404 : Page not found</h1>');
+    res.status(404).sendFiles(path.join(__dirname, 'views', '404.html'));       //status(404) = to response 404 not found
 });
 
 app.listen(3000);
