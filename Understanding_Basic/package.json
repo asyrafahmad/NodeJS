@@ -1,4 +1,3 @@
-
 {
   "name": "understanding_basic",
   "version": "1.0.0",
@@ -6,9 +5,12 @@
   "main": "27app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"node app.js",                                      
-    "start-server": "node app.js" 
+    "start": "nodemon 48app.js",
+    "start-server": "node 48app.js"
   },
   "author": "Asyraf",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
 }
