@@ -11,7 +11,7 @@ const shopRoutes = require('./routes/shop.js');
 app.use(express.urlencoded({extended: true}));                                  //call body parser
 
 app.use('/admin', adminRoutes);
-app.use(shopRoutes);  
+app.use('/shop', shopRoutes);  
 
 //to display 404 not found
 app.use((req, res, next) => {
