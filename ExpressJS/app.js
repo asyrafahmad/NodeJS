@@ -1,14 +1,14 @@
 const path = require('path');
 
-const express = require('express');                 //import expressJS
-const bodyParser = require('body-parser');          //import body parser
+const express = require('express');                                             //import expressJS
+const bodyParser = require('body-parser');                                      //import body parser
 
-const app = express();                              //execute expressJS (initialize object)
+const app = express();                                                          //execute expressJS (initialize object)
 
-const adminRoutes = require('./routes/admin');
+const adminRoutes = require('./routes/admin.js');
 const shopRoutes = require('./routes/shop.js');
 
-app.use(express.urlencoded({extended: true}));                   //call body parser
+app.use(express.urlencoded({extended: true}));                                  //call body parser
 
 app.use('/admin', adminRoutes);
 app.use(shopRoutes);  
