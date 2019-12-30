@@ -5,13 +5,13 @@ const bodyParser = require('body-parser');                                      
 
 const app = express();                                                          //execute expressJS (initialize object)
 
-const adminRoutes = require('./routes/admin.js');
+const adminData = require('./routes/admin.js');
 const shopRoutes = require('./routes/shop.js');
 
 app.use(express.urlencoded({extended: true}));                                  //call body parser
 app.use(express.static(path.join(__dirname, 'public')));                        //set path for public folder
 
-app.use('/admin', adminRoutes);
+app.use('/admin', adminData.routes);        
 app.use('/shop', shopRoutes);  
 
 //to display 404 not found
