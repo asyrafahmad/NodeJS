@@ -11,4 +11,4 @@ router.get('/', (req, res, next) => {
     res.render('shop');                                                 //return the default templating engine                                     
 });                                          
 
-module.exports = router;
+module.exports = router;  a
